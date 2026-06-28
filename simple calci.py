@@ -11,7 +11,7 @@ class Calculator:
         elif self.operation == "*":
             return self.num1 * self.num2
         elif self.operation == "/":
-            if self.num2 == 0:
+            if self.num2 == 0 or self.num1==0:
                 return "Undefined"
             else:
                 return self.num1 / self.num2
