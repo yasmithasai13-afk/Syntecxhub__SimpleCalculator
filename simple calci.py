@@ -17,5 +17,17 @@ class Calculator:
                 return self.num1 / self.num2
         else:
             return "Invalid operator"
+    def repeat(self):
+        while True:
+            repeat = input("Do you want to perform another calculation? (y/n): ").lower()
+            if repeat == "y":
+                obj = Calculator()
+                print("Result:", obj.calculate())
+            elif repeat == "n":
+                print("Thank you for using the calculator. Goodbye!")
+                break
+            else:
+                print("Invalid input. Please enter 'y' or 'n'.")
 obj=Calculator()
 print("Result:", obj.calculate())
+obj.repeat()
